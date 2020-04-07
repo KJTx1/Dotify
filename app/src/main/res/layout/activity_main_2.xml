@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screenPadding"
+    tools:context=".MainActivity"
+    android:id="@+id/all"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llOuter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/loginHeight"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/usernameSize"
+            android:gravity="center"
+            android:text="KJTx1"
+            android:background="@android:color/transparent"
+            />
+
+        <Button
+            android:id="@+id/btnChangeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/loginHeight"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorBackground"
+            android:onClick="changeUser"
+            android:text="CHANGE USER"
+            android:paddingRight="@dimen/paddingTen"
+            android:paddingLeft="@dimen/paddingTen"
+            android:foreground="?selectableItemBackground" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/coverHeight"
+        android:layout_marginTop="@dimen/coverMarginTop"
+        app:srcCompat="@drawable/goodbye"
+        android:scaleType="fitXY" />
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="A Way To Say Goodbye"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/songTitle"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tvLyrics"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/creditHeight"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Seven Lions featuring Sombear, Tove Lo, Myon, Shamali, Mali"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/creditSize"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvNumOfPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/coverMarginTop"
+        android:text="# plays"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/creditSize"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/ivSkipPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="skipPre"
+            app:srcCompat="@drawable/ic_skip_pre_foreground"
+            android:layout_weight="1"
+            android:foreground="?selectableItemBackground" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="playClicked"
+            app:srcCompat="@drawable/ic_play_foreground"
+            android:layout_weight="1"
+            android:foreground="?selectableItemBackground" />
+
+        <ImageView
+            android:id="@+id/ivSkipNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?selectableItemBackground"
+            android:onClick="skipNext"
+            app:srcCompat="@drawable/ic_skip_next_foreground" />
+
+    </LinearLayout>
+</LinearLayout>
