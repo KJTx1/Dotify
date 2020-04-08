@@ -49,8 +49,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun playClicked(view: View) {
-//        Log.i("Jason", "submitButClicked")
-//        Toast.makeText(this, "You got mail!", Toast.LENGTH_SHORT).show()
         playNum += 1
         findViewById<TextView>(R.id.tvNumOfPlay).text = "$playNum plays"
     }
