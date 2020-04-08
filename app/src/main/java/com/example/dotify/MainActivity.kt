@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import kotlin.random.Random
 
 
@@ -13,7 +14,9 @@ class MainActivity : AppCompatActivity() {
 
     private val randomNumber = Random.nextInt(0, 100000000)
     private var playNum = randomNumber
-
+    private fun getStoredColor(resColorID: Int) : Int {
+        return ContextCompat.getColor(this, resColorID)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +39,10 @@ class MainActivity : AppCompatActivity() {
 
 
             for (i in 0 until result.size) {
-                if (result[i].currentTextColor != resources.getColor(R.color.colorGrey)) {
-                    result[i].setTextColor(resources.getColor(R.color.colorGrey))
+                if (result[i].currentTextColor != getStoredColor(R.color.colorGrey)) {
+                    result[i].setTextColor(getStoredColor(R.color.colorGrey))
                 } else {
-                    result[i].setTextColor(resources.getColor(R.color.colorBlack))
+                    result[i].setTextColor(getStoredColor(R.color.colorBlack))
                 }
             }
 
