@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="playCountMarginTop">5dp</dimen>
+    <dimen name="textSize">50px</dimen>
+    <dimen name="marginRight">10dp</dimen>
+    <dimen name="bannerPadLeft">10dp</dimen>
+    <dimen name="bannerPadRight">100dp</dimen>
+    <dimen name="bannerHeight">80dp</dimen>
+    <dimen name="landCoverWidth">220dp</dimen>
+    <dimen name="landArtistWidth">300dp</dimen>
+</resources>

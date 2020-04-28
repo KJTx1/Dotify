@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screenPadding"
+    android:id="@+id/all"
+    android:background="@color/colorWhite">
+
+    <EditText
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/usernameSize"
+        android:gravity="center"
+        android:text="KJTx1"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnChangeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/loginHeight"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorBackground"
+        android:onClick="changeUser"
+        android:text="CHANGE USER"
+        android:paddingRight="@dimen/paddingTen"
+        android:paddingLeft="@dimen/paddingTen"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnChangeUser"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/landCoverWidth"
+        android:layout_height="@dimen/zero"
+        android:layout_marginTop="@dimen/playCountMarginTop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/barrierTop" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="imageView"/>
+
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="A Way To Say Goodbye"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/songTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/barrierTop"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvLyrics"
+        android:layout_width="@dimen/landArtistWidth"
+        android:layout_height="@dimen/creditHeight"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:text="Seven Lions featuring Sombear, Tove Lo, Myon, Shamali, Mali"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/creditSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/tvSongTitle" />
+
+    <TextView
+        android:id="@+id/tvNumOfPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/playCountMarginTop"
+        tools:text="# plays"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/creditSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/tvLyrics" />
+
+
+    <ImageView
+        android:id="@+id/ivSkipPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackground"
+        android:onClick="skipPre"
+        app:layout_constraintLeft_toLeftOf="@id/barrier"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumOfPlay"
+        app:srcCompat="@drawable/ic_skip_pre_foreground" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackground"
+        android:onClick="playClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivSkipPre"
+        app:layout_constraintRight_toLeftOf="@id/ivSkipNext"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumOfPlay"
+        app:srcCompat="@drawable/ic_play_foreground" />
+
+    <ImageView
+        android:id="@+id/ivSkipNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackground"
+        android:onClick="skipNext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumOfPlay"
+        app:srcCompat="@drawable/ic_skip_next_foreground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

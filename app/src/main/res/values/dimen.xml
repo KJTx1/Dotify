@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screenPadding">16dp</dimen>
+    <dimen name="loginHeight">35dp</dimen>
+    <dimen name="usernameSize">18sp</dimen>
+    <dimen name="paddingTen">10dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="coverMarginTop">15dp</dimen>
+    <dimen name="songTitle">28sp</dimen>
+    <dimen name="creditHeight">26dp</dimen>
+    <dimen name="creditSize">14sp</dimen>
+    <dimen name="coverHeight">370dp</dimen>
+</resources>
