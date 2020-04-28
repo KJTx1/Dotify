@@ -1,9 +1,7 @@
-# Activities & RecyclerView by Jason Yan
+# Fragments, Activity Lifecycle & Rotation by Jason Yan
 
-Add RecyclerView of song list to Dotify music app and integrate with Dotify music player.
-
-## Extra credit
-I have completed all extra credit (#1, #2 and #3)
+Rebuild Dotify music app with fragments and run on one activity. Manage the Lifecycle of fragments with the supportFragmentManager as well as manage fragment's display using the back stack.
+Support phone rotation with fragment's/activity's state stored.
 
 ## Screenshot
 <img src="./img/screenshot.jpg" alt="Screenshot of the app" height="500" />
