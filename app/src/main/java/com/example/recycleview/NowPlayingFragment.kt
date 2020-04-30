@@ -26,10 +26,6 @@ class NowPlayingFragment : Fragment() {
     private var randomNumber : Int? = null
     private var playNum : Int? = null
 
-//    private fun getStoredColor(resColorID: Int) : Int {
-//        return ContextCompat.getColor(this, resColorID)
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -46,18 +42,6 @@ class NowPlayingFragment : Fragment() {
         }
         playNum = randomNumber
     }
-
-//    fun changeUser(view: View) {
-//        val userInput = findViewById<EditText>(R.id.tvUserName)
-//        val buttonStatus = findViewById<Button>(R.id.btnChangeUser)
-//        if (buttonStatus.text == "CHANGE USER") {
-//            buttonStatus.text = "APPLY"
-//            userInput.isEnabled = trueng:
-//        } else if (userInput.text.toString() != "") {
-//            buttonStatus.text = "CHANGE USER"
-//            userInput.isEnabled = false
-//        }
-//    }
 
     fun updateSong(song: Song) {
         this.song = song

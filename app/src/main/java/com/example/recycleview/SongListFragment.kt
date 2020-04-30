@@ -20,8 +20,6 @@ class SongListFragment : Fragment() {
 
     private var songAdapter: SongListAdapter? = null
 
-//    private var OnSongClickListener: OnSongClickListener? = null
-
     companion object {
         val TAG : String = SongListFragment::class.java.simpleName
         const val ARG_SONG = "arg_song"
@@ -73,42 +71,6 @@ class SongListFragment : Fragment() {
         songAdapter?.onSongClickListener = { song ->
             onSongClickListener?.onSongClicked(song)
         }
-
-
-
-//        var currentPlay: Song? = null
-
-//        songAdapter?.onSongClickListener = { title, artist, song ->
-//            tvBanner.text = title.plus(" - ").plus(artist)
-//            currentPlay = song;
-//        }
-//
-//        songAdapter.onLongClickListener = { title, artist, pos ->
-//            listOfSongs.removeAt(pos)
-//            songAdapter.update(listOfSongs)
-//            Toast.makeText(this, "$title by $artist was deleted", Toast.LENGTH_SHORT).show()
-//        }
-//
-//        tvBanner.setOnClickListener {
-//            if (currentPlay != null) {
-//                val intent = Intent(this, PlayerActivity::class.java)
-//                intent.putExtra(song_key, currentPlay)
-//                startActivity(intent)
-//            }
-//        }
-//
-
-//        btnShuffle.setOnClickListener {
-//            val shuffleList = listOfSongs?.map { it.copy() }?.toMutableList()
-//            val newList = shuffleList?.apply {
-//                shuffle()
-//            }
-//            if (newList != null) {
-//                listOfSongs = newList.toTypedArray()
-//                songAdapter?.shuffle(newList)
-//            }
-//            Log.i("Jason", "WALAWUBIDUDU")
-//        }
     }
 
     fun shuffleList() {
@@ -134,8 +96,6 @@ class SongListFragment : Fragment() {
 
         var onSongClickListener: ((song: Song) -> Unit)? = null
 
-//        var onLongClickListener: ((title: String, artist: String, pos: Int) -> Unit)? = null
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): songViewHolder {
             val layoutView = LayoutInflater.from(parent.context).inflate(R.layout.item_song, parent, false)
             return songViewHolder(layoutView)
@@ -148,21 +108,12 @@ class SongListFragment : Fragment() {
             holder.bind(eachSong)
         }
 
-//        fun update(updatedList: List<Song>) {
-//            this.listOfSongs = updatedList
-//            notifyDataSetChanged()
-//        }
-
         fun shuffle(newList: List<Song>) {
             val callback = songDiffCallback(this.listOfSongs, newList)
-//            Log.i("Jason2", listOfSongs.toString())
-//            Log.i("Jason2", newList.toString())
             val diffResult = DiffUtil.calculateDiff(callback)
             diffResult.dispatchUpdatesTo(this)
 
             this.listOfSongs = newList
-
-//            notifyDataSetChanged()
         }
 
         inner class songViewHolder(itemView: View): RecyclerView.ViewHolder (itemView) { // 'inner' -- for other class to access
@@ -176,11 +127,6 @@ class SongListFragment : Fragment() {
                 itemView.setOnClickListener {
                     onSongClickListener?.invoke(eachSong)
                 }
-
-//                itemView.setOnLongClickListener {
-//                    onLongClickListener?.invoke(eachSong.title, eachSong.artist, position)
-//                    true;
-//                }
             }
         }
     }
