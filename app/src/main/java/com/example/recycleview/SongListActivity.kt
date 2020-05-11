@@ -12,13 +12,7 @@ import kotlinx.android.synthetic.main.fragment_main.*
 
 class SongListActivity : AppCompatActivity(), OnSongClickListener {
 
-    companion object {
-        private const val CURRENT_SONG = "current_song"
-    }
-
     private var currentPlay: Song? = null
-
-    private var list : List<Song>? = null
 
     private var songListFragment: SongListFragment? = null
 

@@ -1,7 +1,6 @@
-# Fragments, Activity Lifecycle & Rotation by Jason Yan
+# Application, JSON parsing & Network Requests by Jason Yan
 
-Rebuild Dotify music app with fragments and run on one activity. Manage the Lifecycle of fragments with the supportFragmentManager as well as manage fragment's display using the back stack.
-Support phone rotation with fragment's/activity's state stored.
+Rebuild Dotify music app with Fragments and Application Object. Manage Volley HTTP request and list of songs through Application level managers, and parse JSON data using GSON from songList API as well as use Picasso to load pictures.
 
 ## Screenshot
 <img src="./img/screenshot.jpg" alt="Screenshot of the app" height="500" />
