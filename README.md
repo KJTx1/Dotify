@@ -2,5 +2,7 @@
 
 Rebuild Dotify music app with Fragments and Application Object. Manage Volley HTTP request and list of songs through Application level managers, and parse JSON data using GSON from songList API as well as use Picasso to load pictures.
 
+(PS: The loading of pictures can be affected by the Internet connectivity and speed)
+
 ## Screenshot
 <img src="./img/screenshot.jpg" alt="Screenshot of the app" height="500" />
