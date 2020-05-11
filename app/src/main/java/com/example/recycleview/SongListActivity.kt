@@ -3,6 +3,7 @@ package com.example.recycleview
 import Song
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +39,8 @@ class SongListActivity : AppCompatActivity(), OnSongClickListener {
 
             },
             {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+
                 val dialogBuilder = AlertDialog.Builder(this)
 
                 dialogBuilder.setMessage("No Internet Connection !!!")
