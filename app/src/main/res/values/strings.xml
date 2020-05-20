@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AnnoyingEx</string>
+    <string name="notification_message"><b>Notification Message:</b></string>
+</resources>
